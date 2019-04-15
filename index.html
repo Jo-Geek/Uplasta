@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    UpLasta
+  </title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="assets/css/mango.css" />
+  <link rel="stylesheet" href="assets/css/mango.utilities.css" />
+
+</head>
+
+<body class="home">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img
+          src="data:image/png;base64,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"
+          height="30" class="d-inline-block align-top" alt="" />
+        <strong class="text-secondary">Uplasta</strong>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-2">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Categories <small class="fas fa-chevron-down"></small>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Coming soon</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="categories.html">See all categories</a>
+            </div>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0 nav-search">
+          <input class="form-control mr-sm-2 form-control-sm rounded-pill px-3" style="min-width:300px;" type="search"
+            placeholder="What would you like to learn?" aria-label="Search">
+          <button class="btn btn-sm btn-light rounded-pill btn-nav-search"><i class="fas fa-search"></i></button>
+        </form>
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Employees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+
+        </ul>
+        <button class="btn btn-sm btn-danger shadow-sm ml-0">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner position-relative mb-0">
+    <img class="w-100 h-auto" src="assets/img/bg.png" />
+    <div class="banner-cta">
+      <input class="form-control shadow mb-3" placeholder="Your Email">
+      <button class="btn btn-danger shadow">Get Started!</button>
+    </div>
+  </div>
+
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="section-title">Apply to Jobs</h3>
+          <p class="pr-2 mb-4">Choose your dream job.
+            Work towards achieving one.<br />
+            And, we’re there to help!</p>
+
+          <button class="btn btn-sm btn-primary shadow px-4">See all Jobs</button>
+        </div>
+
+        <div class="col-sm-9">
+          <div class="d-none d-lg-block carousel-control">
+            <button class="btn-carousel btn-carousel-left shadow-sm rounded-circle">
+              <i class="fas fa-chevron-left text-primary"></i>
+            </button>
+            <button class="btn-carousel btn-carousel-right shadow-sm rounded-circle">
+              <i class="fas fa-chevron-right text-primary"></i>
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <img style="max-height:50px;" src="assets/img/samplelogo.png" />
+                </div>
+                <div class="card-body border-top py-2">
+                  <strong>Software engg.</strong>
+                  <div class="text-muted">Company Name</div>
+
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What does job need from the
+                    candidate? <br />
+                    Few words here
+                  </small>
+                </div>
+                <div class="card-body pb-2">
+                  <div class="row">
+                    <div class="col pr-0">
+                      <div class="text-muted small mr-1">
+                        <i class="fas fa-globe-asia"></i>
+                        Chennai
+                      </div>
+                    </div>
+                    <div class="col pl-0 text-right">
+
+                      <div class="text-muted small">
+                        <i class="fas fa-calendar mr-1"></i>
+                        23-Mar '19</div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <img style="max-height:50px;" src="assets/img/samplelogo.png" />
+                </div>
+                <div class="card-body border-top py-2">
+                  <strong>Software engg.</strong>
+                  <div class="text-muted">Company Name</div>
+
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What does job need from the
+                    candidate? <br />
+                    Few words here
+                  </small>
+                </div>
+                <div class="card-body pb-2">
+                  <div class="row">
+                    <div class="col pr-0">
+                      <div class="text-muted small mr-1">
+                        <i class="fas fa-globe-asia"></i>
+                        Chennai
+                      </div>
+                    </div>
+                    <div class="col pl-0 text-right">
+
+                      <div class="text-muted small">
+                        <i class="fas fa-calendar mr-1"></i>
+                        23-Mar '19</div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <img style="max-height:50px;" src="assets/img/samplelogo.png" />
+                </div>
+                <div class="card-body border-top py-2">
+                  <strong>Software engg.</strong>
+                  <div class="text-muted">Company Name</div>
+
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What does job need from the
+                    candidate? <br />
+                    Few words here
+                  </small>
+                </div>
+                <div class="card-body pb-2">
+                  <div class="row">
+                    <div class="col pr-0">
+                      <div class="text-muted small mr-1">
+                        <i class="fas fa-globe-asia"></i>
+                        Chennai
+                      </div>
+                    </div>
+                    <div class="col pl-0 text-right">
+
+                      <div class="text-muted small">
+                        <i class="fas fa-calendar mr-1"></i>
+                        23-Mar '19</div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <img style="max-height:50px;" src="assets/img/samplelogo.png" />
+                </div>
+                <div class="card-body border-top py-2">
+                  <strong>Software engg.</strong>
+                  <div class="text-muted">Company Name</div>
+
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What does job need from the
+                    candidate? <br />
+                    Few words here
+                  </small>
+                </div>
+                <div class="card-body pb-2">
+                  <div class="row">
+                    <div class="col pr-0">
+                      <div class="text-muted small mr-1">
+                        <i class="fas fa-globe-asia"></i>
+                        Chennai
+                      </div>
+                    </div>
+                    <div class="col pl-0 text-right">
+
+                      <div class="text-muted small">
+                        <i class="fas fa-calendar mr-1"></i>
+                        23-Mar '19</div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="section-title">Become an expert</h3>
+          <p class="pr-2 mb-4">Select the areas of your
+            interest.
+            Specialize to stand out.<br />
+            Above all, we invest in you!</p>
+
+          <button class="btn btn-sm btn-primary shadow px-4">See all Courses</button>
+        </div>
+
+        <div class="col-sm-9">
+          <div class="d-none d-lg-block carousel-control">
+            <button class="btn-carousel btn-carousel-left shadow-sm rounded-circle">
+              <i class="fas fa-chevron-left text-primary"></i>
+            </button>
+            <button class="btn-carousel btn-carousel-right shadow-sm rounded-circle">
+              <i class="fas fa-chevron-right text-primary"></i>
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 px-1">
+              <div class="card  shadow-sm bg-light">
+                <div class="card-body pb-1">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pt-0 pb-2">
+                  <strong>Course Name</strong>
+                  <div class="ratings">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+                </div>
+                <div class="card-body py-2 bg-white">
+                  <small class="text-secondary">
+                    A short description of this course
+                    so candidate can know what he
+                    can expect from this course...
+                  </small>
+
+                  <div class="mt-2 text-primary">Online/On-Premise</div>
+                </div>
+                <div class="card-body pt-2 bg-white">
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card  shadow-sm bg-light">
+                <div class="card-body pb-1">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pt-0 pb-2">
+                  <strong>Course Name</strong>
+                  <div class="ratings">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+                </div>
+                <div class="card-body py-2 bg-white">
+                  <small class="text-secondary">
+                    A short description of this course
+                    so candidate can know what he
+                    can expect from this course...
+                  </small>
+
+                  <div class="mt-2 text-primary">Online/On-Premise</div>
+                </div>
+                <div class="card-body pt-2 bg-white">
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card  shadow-sm bg-light">
+                <div class="card-body pb-1">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pt-0 pb-2">
+                  <strong>Course Name</strong>
+                  <div class="ratings">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+                </div>
+                <div class="card-body py-2 bg-white">
+                  <small class="text-secondary">
+                    A short description of this course
+                    so candidate can know what he
+                    can expect from this course...
+                  </small>
+
+                  <div class="mt-2 text-primary">Online/On-Premise</div>
+                </div>
+                <div class="card-body pt-2 bg-white">
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card  shadow-sm bg-light">
+                <div class="card-body pb-1">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pt-0 pb-2">
+                  <strong>Course Name</strong>
+                  <div class="ratings">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+                </div>
+                <div class="card-body py-2 bg-white">
+                  <small class="text-secondary">
+                    A short description of this course
+                    so candidate can know what he
+                    can expect from this course...
+                  </small>
+
+                  <div class="mt-2 text-primary">Online/On-Premise</div>
+                </div>
+                <div class="card-body pt-2 bg-white">
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="section-title">Assessments</h3>
+          <p class="pr-2 mb-4">Assess yourself to identify gaps.<br />
+            We know you could do it,<br />
+            let’s show you how.</p>
+
+          <button class="btn btn-sm btn-primary shadow px-4">See all Assessments</button>
+        </div>
+
+        <div class="col-sm-9">
+          <div class="d-none d-lg-block carousel-control">
+            <button class="btn-carousel btn-carousel-left shadow-sm rounded-circle">
+              <i class="fas fa-chevron-left text-primary"></i>
+            </button>
+            <button class="btn-carousel btn-carousel-right shadow-sm rounded-circle">
+              <i class="fas fa-chevron-right text-primary"></i>
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body pb-2">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pb-2 pt-0">
+                  <strong>Personality</strong>
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What this test is about. <br />
+                    A few words to describe it.
+                  </small>
+
+                </div>
+                <div class="card-body pt-2">
+
+                  <div class="ratings mb-4">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body pb-2">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pb-2 pt-0">
+                  <strong>Personality</strong>
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What this test is about. <br />
+                    A few words to describe it.
+                  </small>
+
+                </div>
+                <div class="card-body pt-2">
+
+                  <div class="ratings mb-4">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body pb-2">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pb-2 pt-0">
+                  <strong>Personality</strong>
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What this test is about. <br />
+                    A few words to describe it.
+                  </small>
+
+                </div>
+                <div class="card-body pt-2">
+
+                  <div class="ratings mb-4">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 px-1">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body pb-2">
+                  <img class="" style="max-height:50px;" src="assets/img/mysql.png" />
+                </div>
+                <div class="card-body pb-2 pt-0">
+                  <strong>Personality</strong>
+                </div>
+                <div class="card-body py-2 bg-light">
+                  <small class="text-secondary">
+                    What this test is about. <br />
+                    A few words to describe it.
+                  </small>
+
+                </div>
+                <div class="card-body pt-2">
+
+                  <div class="ratings mb-4">
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star text-yellow"></i>
+                    <i class="fas fa-star-half mr-1 text-yellow"></i>
+                    <small class="rating-value d-block mt-1"><a href="#" class="">3.5 Google reviews</a></small>
+                  </div>
+
+
+                  <div class="text-muted small mr-1">
+                    <i class="fas fa-users"></i>
+                    2,432
+                  </div>
+
+
+                  <div class="small ribbon-course-value">
+
+                    FREE</div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bg-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3 class="section-title">Success Stories</h3>
+          <p class="pr-2 mb-4">Select the areas of your
+            interest.
+            Specialize to stand out.<br />
+            Above all, we invest in you!</p>
+
+          <button class="btn btn-sm btn-primary shadow px-4">See all Courses</button>
+        </div>
+
+        <div class="col-sm-9">
+          <div class="d-none d-lg-block carousel-control">
+            <button class="btn-carousel btn-carousel-left shadow-sm rounded-circle">
+              <i class="fas fa-chevron-left text-primary"></i>
+            </button>
+            <button class="btn-carousel btn-carousel-right shadow-sm rounded-circle">
+              <i class="fas fa-chevron-right text-primary"></i>
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card shadow-sm bg-light mb-4">
+                <div class="card-body pb-1">
+                  <div class="media">
+                    <img src="assets/img/sampleuser.png" class="mr-3" style="width:50px;">
+                    <div class="media-body">
+                      <p class="mb-0">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                      </p>
+                      <small class="text-muted">-Someone</small>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card shadow-sm bg-light">
+                <div class="card-body pb-1">
+                  <div class="media">
+                    <img src="assets/img/sampleuser.png" class="mr-3" style="width:50px;">
+                    <div class="media-body">
+                      <p class="mb-0">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                      </p>
+                      <small class="text-muted">-Someone</small>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card shadow-sm bg-light mb-4">
+                <div class="card-body pb-1">
+                  <div class="media">
+                    <img src="assets/img/sampleuser.png" class="mr-3" style="width:50px;">
+                    <div class="media-body">
+                      <p class="mb-0">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                      </p>
+                      <small class="text-muted">-Someone</small>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card shadow-sm bg-light">
+                <div class="card-body pb-1">
+                  <div class="media">
+                    <img src="assets/img/sampleuser.png" class="mr-3" style="width:50px;">
+                    <div class="media-body">
+                      <p class="mb-0">
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                      </p>
+                      <small class="text-muted">-Someone</small>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white pt-4">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-sm-6">
+          <img
+            src="data:image/png;base64,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"
+            height="30" class="d-inline-block align-top" alt="" />
+          <strong class="text-secondary" style="font-size:1.25rem">Uplasta</strong>
+
+          <p class="mt-4">
+            Democratize learning to bring transformation,<br />
+            in everyone.
+          </p>
+
+          <div class="mt-3">
+            <a class="social-link-fb" href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="social-link-li" href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="social-link-tw" href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="social-link-angel" href="#">
+              <i class="fab fa-angellist"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <strong class="d-block mb-2">
+            Company
+          </strong>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Investors</a>
+            </li>
+            <li>
+              <a href="#">Customer Stories</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="col-sm-2">
+          <strong class="d-block mb-2">
+            Resources
+          </strong>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Technologies</a>
+            </li>
+            <li>
+              <a href="#">Teching</a>
+            </li>
+            <li>
+              <a href="#">Programs</a>
+            </li>
+            <li>
+              <a href="#">events</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-2">
+          <strong class="d-block mb-2">
+            Support
+          </strong>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+            <li>
+              <a href="#">Help</a>
+            </li>
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="bg-dark py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 text-white">
+            © Copyright 2019 UpLasta. All rights reserved. <br />
+            Various trademarks and logos held by their respective owners.
+          </div>
+          <div class="col-sm-6 d-flex align-items-center justify-content-end">
+            <a href="#" class="mr-2 align-middle">Privacy Policy</a>
+            <a href="#" class="align-middle">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

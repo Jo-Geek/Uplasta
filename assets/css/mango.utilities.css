@@ -1,0 +1,9 @@
+/*!
+ * Mango Utility CSS
+ * Jones Joseph
+ * For Uplasta - via DQube GSS 
+ */
+
+.text-yellow {
+    color: var(--yellow) !important;
+}

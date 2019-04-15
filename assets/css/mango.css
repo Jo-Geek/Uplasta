@@ -1,0 +1,166 @@
+/*!
+ * Mango CSS
+ * Jones Joseph
+ * For Uplasta - via DQube GSS 
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .9rem;
+}
+
+.navbar {
+    border-bottom: 3px solid #273BE2;
+}
+
+.nav-search {
+    position: relative;
+}
+
+.btn-nav-search {
+    position: absolute;
+    right: 0rem;
+    color: var(--secondary);
+    border-color: #ced4da;
+}
+
+.banner-cta {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    top: 250px;
+    left: 100px;
+    width: 400px;
+}
+
+body.home {
+    background-image: url(../img/sectionbg.png);
+    background-position: center center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+section.bg-light {
+    background-color: rgba(0, 0, 0, 0.025) !important;
+}
+
+section.bg-white {
+    background-color: rgba(255, 255, 255, 0.025) !important;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    height: 5px;
+    width: 50px;
+    background-color: #273be2;
+    left: 0;
+}
+
+.carousel-control {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.btn-carousel {
+    position: absolute;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    height: 36px;
+    width: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.btn-carousel:hover, .btn-carousel:focus {
+    background-color: #f4f4f4;
+}
+
+.btn-carousel-left {
+    left: -40px;
+}
+
+.btn-carousel-right {
+    right: -40px;
+}
+
+.ratings {
+    font-size: 90%;
+}
+
+.ribbon-course-value {
+    position: absolute;
+    right: 0;
+    bottom: .75rem;
+    padding: .25rem .5rem;
+    background-color: #58379F;
+    color: white;
+}
+
+.ribbon-course-value:before {
+    content: '';
+    position: absolute;
+    border: 12.5px solid #58379F;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    left: -12.5px;
+    top: 0;
+}
+
+footer {
+    box-shadow: 0 -.5rem 1rem rgba(0, 0, 0, .15)!important
+}
+
+[class*=social-link-] {
+    margin-right: .5rem;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+[class*=social-link-]:hover, [class*=social-link-]:focus {
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.3);
+}
+
+.social-link-fb {
+    background-color: #3b5998;
+}
+
+.social-link-li {
+    background-color: #007AB9;
+}
+
+.social-link-tw {
+    background-color: #55ACEE;
+}
+
+.social-link-angel {
+    background-color: #808080;
+}
+
+.banner-category-filter {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 1) 0%, rgba(54, 68, 93, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 1) 0%, rgba(54, 68, 93, 1) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(54, 68, 93, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#36445d', GradientType=1);
+}

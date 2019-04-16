@@ -164,3 +164,102 @@ footer {
     background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(54, 68, 93, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#36445d', GradientType=1);
 }
+
+.banner-course-header {
+    background-image: url('../img/coursedetailheader.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.course-levels {
+    position: relative;
+    width: 100%;
+}
+
+.course-levels:before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    background: white;
+    left: 80px;
+    right: 80px;
+    top: 40px;
+}
+
+.course-levels [class*=level-] {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 80px;
+    border: 5px solid white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.5), inset 0 0 .5rem rgb(0, 0, 0, 0.5);
+}
+
+.course-levels [class*=level-] span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    left: 50%;
+    bottom: -2.5rem;
+    transform: translateX(-50%);
+    text-shadow: 0 0 0.5ren rgba(0, 0, 0, 0.3);
+}
+
+.level-basic {
+    left: 0;
+}
+
+.level-intermediate {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.level-expert {
+    right: 0
+}
+
+.level-basic:before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, transparent 0%, transparent 70%, var(--orange) 71%, var(--orange) 100%);
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.level-intermediate:before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--primary) 51%, var(--primary) 100%);
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.level-expert:before {
+    content: '';
+    position: absolute;
+    background: var(--success);
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.card-course-videos {
+    top: 80px;
+}
+
+.list-course-videos {
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+}

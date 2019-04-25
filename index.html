@@ -79,12 +79,44 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Employees</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-toggle="dropdown">Login</a>
+            <div class="dropdown-menu shadow dropdown-menu-right" style="width:300px;">
+              <form class="px-4 py-3">
+                <div class="form-group">
+                  <label for="exampleDropdownFormEmail1">Email address</label>
+                  <input type="email" class="form-control form-control-sm" id="exampleDropdownFormEmail1"
+                    placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleDropdownFormPassword1">Password</label>
+                  <input type="password" class="form-control form-control-sm" id="exampleDropdownFormPassword1"
+                    placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Remember Me</label>
+                  </div>
+                </div>
+                <div class="clearfix">
+                  <button type="submit" class="btn btn-info btn-sm">Login</button>
+
+                  <button class="float-right btn btn-sm btn-danger rounded-pill shadow-sm">
+                    <i class="fab fa-google"></i>
+                  </button>
+                  <button class="float-right btn btn-sm btn-primary rounded-pill mr-1 shadow-sm">
+                    <i class="fab fa-facebook-f" style="padding:0 .2rem"></i>
+                  </button>
+                </div>
+              </form>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Forgot password?</a>
+            </div>
           </li>
 
         </ul>
-        <button class="btn btn-sm btn-danger shadow-sm ml-0">Sign up</button>
+        <button class="btn btn-sm btn-danger shadow-sm ml-0" data-toggle="modal" data-target="#mSignUp">Sign up</button>
       </div>
     </div>
   </nav>
@@ -862,6 +894,60 @@
       </div>
     </div>
   </footer>
+
+
+  <div class="modal fade" id="mSignUp">
+    <div class="modal-dialog" style="width:400px;">
+      <div class="modal-content shadow-lg">
+        <div class="modal-header">
+          <div class="clearfix w-100">
+            <button class="btn btn-sm btn-light rounded-pill float-right" data-dismiss="modal">
+              <i class="fas fa-times"></i>
+            </button>
+            <h4 class="text-center mb-0 font-weight-regular">Sign Up</h4>
+          </div>
+        </div>
+        <div class="modal-body px-5">
+          <form class="py-3">
+            <div class="form-group">
+              <label for="exampleDropdownFormEmail1">Email address</label>
+              <input type="email" class="form-control form-control-sm" id="exampleDropdownFormEmail1"
+                placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="exampleDropdownFormPassword1">Password</label>
+              <input type="password" class="form-control form-control-sm" id="exampleDropdownFormPassword1"
+                placeholder="Password">
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
+                  <a href="#">Terms of service</a>.</label>
+              </div>
+            </div>
+            <div class="clearfix">
+              <button type="submit" class="btn btn-info btn-sm">Sign Up</button>
+
+
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer text-left justify-content-start px-5">
+          <button class="btn btn-light rounded-pill shadow-sm text-danger border">
+            <i class="fab fa-google mr-1"></i>
+            Google
+          </button>
+          <button class="btn btn-primary rounded-pill ml-3 shadow-sm">
+            <i class="fab fa-facebook-f mr-1"></i>
+            Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

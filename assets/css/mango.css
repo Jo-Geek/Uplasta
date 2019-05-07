@@ -8,6 +8,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     font-size: .9rem;
+    color: #495057;
 }
 
 .navbar {
@@ -262,4 +263,18 @@ footer {
 .list-course-videos {
     max-height: calc(100vh - 180px);
     overflow-y: auto;
+}
+
+.section-or {
+    position: relative;
+}
+
+.section-or:before {
+    content: "OR";
+    position: absolute;
+    padding: .25rem .5rem;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }

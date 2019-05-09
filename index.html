@@ -902,117 +902,179 @@
 
 
   <div class="modal fade" id="mSignUp" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered" style="max-width:400px;">
-      <div class="modal-content shadow-lg">
-        <div class="modal-header px-4">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content shadow-lg overflow-hidden">
+        <div class="modal-header px-4 d-none">
           <div class="clearfix w-100">
-            <button class="btn btn-sm btn-light rounded-pill float-right" data-dismiss="modal">
-              <i class="fas fa-times"></i>
-            </button>
+
             <h4 class="mb-0 font-weight-regular">Sign Up
 
             </h4>
             <div class="d-block text-muted">Join us to get the most out of Uplasta</div>
           </div>
         </div>
-        <div class="modal-body px-4">
-          <form class="pb-3" id="divPhone">
-            <div class="form-group">
-              <label class="text-info">Mobile Number</label>
-              <div class="" id="flagPicker">
+        <div class="modal-body p-0">
 
-              </div>
-              <small class="text-muted">We’ll send a 6 digit OTP to verify your phone number</small>
+          <div class="row mr-0">
+            <div class="col-md-7 py-4 pl-5 bg-info text-white">
 
-            </div>
-            <button class="btn btn-info btn-block shadow" id="btnGetOtp" onclick="showOtp(event)">Get OTP</button>
+              <button class="btn btn-sm btn-info rounded-pill float-right" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+              </button>
+              <h4 class="mb-0 font-weight-regular text-center">Sign Up
 
-            <!-- 
-            <div class="form-group">
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
-                  <a href="#">Terms of service</a>.</label>
-              </div>
-            </div> -->
+              </h4>
+              <div class="d-block text-light text-center">Join us to get the most out of Uplasta</div>
 
-          </form>
 
-          <form class="pb-3" id="divOtp" style="display:none">
-
-            <div class="form-group text-center">
-              <h5 class="mb-0">Enter OTP</h5>
-              <small class="text-muted d-block mt-1 mb-4">OTP sent to +91 9482746289 (<a href="#"
-                  onclick="showPhone(event)">wrong
-                  number?</a>)</small>
-              <input class="form-control text-center form-control-lg" />
-            </div>
-
-            <div class="my-3 text-center">
-              <a href="#">Resend OTP</a>
-            </div>
-
-            <div class="">
-              <button class="btn btn-info btn-block shadow">Submit</button>
-            </div>
-            <!-- 
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
-                    <a href="#">Terms of service</a>.</label>
+              <div class="row mt-5 text-center">
+                <div class="col-sm-6">
+                  <i class="fas fa-briefcase fa-3x mb-3"></i>
+                  <div>
+                    <h5>120+ Jobs</h5>
+                    <p class="text-light">Chose your dream job</p>
+                  </div>
                 </div>
-              </div> -->
 
+                <div class="col-sm-6">
+                  <i class="fas fa-chalkboard-teacher fa-3x mb-3"></i>
+                  <div>
+                    <h5>3,400+ Courses</h5>
+                    <p class="text-light">Specialize to stand out</p>
+                  </div>
+                </div>
+              </div>
 
+              <div class="row my-5 text-center">
+                <div class="col-sm-6">
+                  <i class="fas fa-briefcase fa-3x mb-3"></i>
+                  <div>
+                    <h5>1,234+ Assessments</h5>
+                    <p class="text-light">Assess yourself to identify gaps</p>
+                  </div>
+                </div>
 
-          </form>
+                <div class="col-sm-6">
+                  <i class="fas fa-chalkboard-teacher fa-3x mb-3"></i>
+                  <div>
+                    <h5>2,421+ Students</h5>
+                    <p class="text-light">We invest in you! For your success</p>
+                  </div>
+                </div>
+              </div>
 
-
-          <form class="pb-3" id="divEmail" style="display:none">
-            <div class="form-group">
-              <label for="exampleDropdownFormEmail1">Email address</label>
-              <input type="email" class="form-control form-control-sm" placeholder="email@example.com">
             </div>
-            <div class="form-group">
-              <label for="exampleDropdownFormPassword1">Password</label>
-              <input type="password" class="form-control form-control-sm" placeholder="Password">
+
+            <div class="col-md-5 py-4">
+              <form class="pb-3" id="divPhone">
+                <div class="form-group">
+                  <label class="text-info">Mobile Number</label>
+                  <div class="" id="flagPicker">
+
+                  </div>
+                  <small class="text-muted">We’ll send a 6 digit OTP to verify your phone number</small>
+
+                </div>
+                <button class="btn btn-info btn-block shadow" id="btnGetOtp" onclick="showOtp(event)">Get OTP</button>
+
+                <!-- 
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
+                          <a href="#">Terms of service</a>.</label>
+                      </div>
+                    </div> -->
+
+              </form>
+
+              <form class="pb-3" id="divOtp" style="display:none">
+
+                <div class="form-group text-center">
+                  <h5 class="mb-0">Enter OTP</h5>
+                  <small class="text-muted d-block mt-1 mb-4">OTP sent to +91 9482746289 (<a href="#"
+                      onclick="showPhone(event)">wrong
+                      number?</a>)</small>
+                  <input class="form-control text-center form-control-lg" />
+                </div>
+
+                <div class="my-3 text-center">
+                  <a href="#">Resend OTP</a>
+                </div>
+
+                <div class="">
+                  <button class="btn btn-info btn-block shadow">Submit</button>
+                </div>
+                <!-- 
+                      <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck2">
+                          <label class="custom-control-label" for="customCheck2">I have read the <a href="#">Pivacy policy</a> and
+                            <a href="#">Terms of service</a>.</label>
+                        </div>
+                      </div> -->
+
+
+
+              </form>
+
+
+              <form class="pb-3" id="divEmail" style="display:none">
+                <div class="form-group">
+                  <label for="exampleDropdownFormEmail1">Email address</label>
+                  <input type="email" class="form-control form-control-sm" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleDropdownFormPassword1">Password</label>
+                  <input type="password" class="form-control form-control-sm" placeholder="Password">
+                </div>
+
+                <div class="mt-4">
+                  <button type="submit" class="btn btn-info btn-block shadow">Sign Up</button>
+
+
+                </div>
+
+              </form>
+
+              <div class="section-or border-top mt-4 pt-4 text-center">
+                <div class="text-center mt-3">
+                  <button class="btn btn-lg btn-light border rounded-circle p-0 shadow-sm"
+                    style="height:50px;width:50px;">
+                    <img class="m-auto" style="vertical-align: text-bottom"
+                      src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5nb29nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTMiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTUiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTciPjwvcGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSIxLjEtU2lnbnVwL0xvZ2luIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iZ29vZ2xlIj4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay0yKSIgcG9pbnRzPSItMC45MzAyMzI1NTggMTUuOTA5MDkwOSAtMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stNCIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMyI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRUE0MzM1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay00KSIgcG9pbnRzPSItMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDEwLjIzMjU1ODEgNy4yMjcyNzI3MyAyMS4zOTUzNDg4IDUuNDU0NTQ1NDUgMjEuMzk1MzQ4OCAtMC45MDkwOTA5MDkgLTAuOTMwMjMyNTU4IC0wLjkwOTA5MDkwOSI+PC9wb2x5Z29uPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIGlkPSJDbGlwcGVkIj4KICAgICAgICAgICAgICAgIDxtYXNrIGlkPSJtYXNrLTYiIGZpbGw9IndoaXRlIj4KICAgICAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTUiPjwvdXNlPgogICAgICAgICAgICAgICAgPC9tYXNrPgogICAgICAgICAgICAgICAgPGcgaWQ9ImEiPjwvZz4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTaGFwZSIgZmlsbD0iIzM0QTg1MyIgZmlsbC1ydWxlPSJub256ZXJvIiBtYXNrPSJ1cmwoI21hc2stNikiIHBvaW50cz0iLTAuOTMwMjMyNTU4IDE1LjkwOTA5MDkgMTMuMDIzMjU1OCA1LjQ1NDU0NTQ1IDE2LjY5NzY3NDQgNS45MDkwOTA5MSAyMS4zOTUzNDg4IC0wLjkwOTA5MDkwOSAyMS4zOTUzNDg4IDIwLjkwOTA5MDkgLTAuOTMwMjMyNTU4IDIwLjkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyBpZD0iQ2xpcHBlZCI+CiAgICAgICAgICAgICAgICA8bWFzayBpZD0ibWFzay04IiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcGF0aC03Ij48L3VzZT4KICAgICAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgICAgIDxnIGlkPSJhIj48L2c+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIgbWFzaz0idXJsKCNtYXNrLTgpIiBwb2ludHM9IjIxLjM5NTM0ODggMjAuOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDUuMTE2Mjc5MDcgOC42MzYzNjM2NCAyMS4zOTUzNDg4IDQuMDkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
+                  </button>
+
+                  <button class="btn btn-lg btn-primary border rounded-circle p-0 shadow-sm ml-3"
+                    style="height:50px;width:50px;background-color:#4267b2">
+                    <img class="m-auto" style="vertical-align: text-bottom"
+                      src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSIxOXB4IiB2aWV3Qm94PSIwIDAgMTEgMTkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Hcm91cDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUuMDAwMDAwLCAtMS4wMDAwMDApIj4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0Q4RDhEOCIgb3BhY2l0eT0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj48L3JlY3Q+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS42MzUxNTA5LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTEuNTAxMDM0OSBMMTQuNjQ4OTUzLDExLjUwMTAzNDkgTDE1LjEwMDIyNzEsOC4wNjg1NTQxMSBMMTEuNjM1MTUwOSw4LjA2ODU1NDExIEwxMS42MzUxNTA5LDUuODc3MTMyMDEgQzExLjYzNTE1MDksNC44ODMzNDk2MyAxMS45MTY0Nzc0LDQuMjA2MTE5NzEgMTMuMzY5MjYzNCw0LjIwNjExOTcxIEwxNS4yMjIyMjIyLDQuMjA1MzI1NDcgTDE1LjIyMjIyMjIsMS4xMzUyODcxMyBDMTQuOTAxNzYsMS4wOTM0NTY2NyAxMy44MDE4MjQ0LDEgMTIuNTIyMTM0OCwxIEM5Ljg1MDU2Njg5LDEgOC4wMjE1MzkyNiwyLjU5OTYxODExIDguMDIxNTM5MjYsNS41MzcxOTMzMSBMOC4wMjE1MzkyNiw4LjA2ODU1NDExIEw1LDguMDY4NTU0MTEgTDUsMTEuNTAxMDM0OSBMOC4wMjE1MzkyNiwxMS41MDEwMzQ5IEw4LjAyMTUzOTI2LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTkuOTk5NTg4OSBaIiBpZD0iZiIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=">
+                  </button>
+                </div>
+
+                <div class="my-3">
+                  <a href="#" id="lnkEmail" onclick="showEmail(event)">Signup with email</a>
+                  <a href="#" id="lnkMobile" style="display:none" onclick="showPhone(event)">Signup with mobile
+                    number</a>
+                </div>
+
+                <div class="small d-block text-muted">
+                  By signing in, you confirm that you have read and agree to our
+                  <a href="#">Terms & Conditions</a> and
+                  <a href="#">Privacy Policy</a>
+                </div>
+              </div>
+
             </div>
-
-            <div class="mt-4">
-              <button type="submit" class="btn btn-info btn-block shadow">Sign Up</button>
+          </div>
 
 
-            </div>
 
-          </form>
         </div>
 
-        <div class="modal-footer text-center flex-column px-5 section-or" id="divFooter">
-          <div class="text-center mt-3">
-            <button class="btn btn-lg btn-light border rounded-circle p-0 shadow-sm" style="height:50px;width:50px;">
-              <img class="m-auto" style="vertical-align: text-bottom"
-                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5nb29nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTEiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTMiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTUiPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNMTkuNzY3NDQxOSw4LjE4MTgxODE4IEwxMC4yMzI1NTgxLDguMTgxODE4MTggTDEwLjIzMjU1ODEsMTIuMDQ1NDU0NSBMMTUuNzIwOTMwMiwxMi4wNDU0NTQ1IEMxNS4yMDkzMDIzLDE0LjUgMTMuMDY5NzY3NCwxNS45MDkwOTA5IDEwLjIzMjU1ODEsMTUuOTA5MDkwOSBDNi44ODM3MjA5MywxNS45MDkwOTA5IDQuMTg2MDQ2NTEsMTMuMjcyNzI3MyA0LjE4NjA0NjUxLDEwIEM0LjE4NjA0NjUxLDYuNzI3MjcyNzMgNi44ODM3MjA5Myw0LjA5MDkwOTA5IDEwLjIzMjU1ODEsNC4wOTA5MDkwOSBDMTEuNjc0NDE4Niw0LjA5MDkwOTA5IDEyLjk3Njc0NDIsNC41OTA5MDkwOSAxNCw1LjQwOTA5MDkxIEwxNi45NzY3NDQyLDIuNSBDMTUuMTYyNzkwNywwLjk1NDU0NTQ1NSAxMi44MzcyMDkzLDAgMTAuMjMyNTU4MSwwIEM0LjU1ODEzOTUzLDAgMCw0LjQ1NDU0NTQ1IDAsMTAgQzAsMTUuNTQ1NDU0NSA0LjU1ODEzOTUzLDIwIDEwLjIzMjU1ODEsMjAgQzE1LjM0ODgzNzIsMjAgMjAsMTYuMzYzNjM2NCAyMCwxMCBDMjAsOS40MDkwOTA5MSAxOS45MDY5NzY3LDguNzcyNzI3MjcgMTkuNzY3NDQxOSw4LjE4MTgxODE4IFoiIGlkPSJwYXRoLTciPjwvcGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSIxLjEtU2lnbnVwL0xvZ2luIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iZ29vZ2xlIj4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay0yKSIgcG9pbnRzPSItMC45MzAyMzI1NTggMTUuOTA5MDkwOSAtMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgaWQ9IkNsaXBwZWQiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stNCIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMyI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iYSI+PC9nPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRUE0MzM1IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjbWFzay00KSIgcG9pbnRzPSItMC45MzAyMzI1NTggNC4wOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDEwLjIzMjU1ODEgNy4yMjcyNzI3MyAyMS4zOTUzNDg4IDUuNDU0NTQ1NDUgMjEuMzk1MzQ4OCAtMC45MDkwOTA5MDkgLTAuOTMwMjMyNTU4IC0wLjkwOTA5MDkwOSI+PC9wb2x5Z29uPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIGlkPSJDbGlwcGVkIj4KICAgICAgICAgICAgICAgIDxtYXNrIGlkPSJtYXNrLTYiIGZpbGw9IndoaXRlIj4KICAgICAgICAgICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNwYXRoLTUiPjwvdXNlPgogICAgICAgICAgICAgICAgPC9tYXNrPgogICAgICAgICAgICAgICAgPGcgaWQ9ImEiPjwvZz4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTaGFwZSIgZmlsbD0iIzM0QTg1MyIgZmlsbC1ydWxlPSJub256ZXJvIiBtYXNrPSJ1cmwoI21hc2stNikiIHBvaW50cz0iLTAuOTMwMjMyNTU4IDE1LjkwOTA5MDkgMTMuMDIzMjU1OCA1LjQ1NDU0NTQ1IDE2LjY5NzY3NDQgNS45MDkwOTA5MSAyMS4zOTUzNDg4IC0wLjkwOTA5MDkwOSAyMS4zOTUzNDg4IDIwLjkwOTA5MDkgLTAuOTMwMjMyNTU4IDIwLjkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyBpZD0iQ2xpcHBlZCI+CiAgICAgICAgICAgICAgICA8bWFzayBpZD0ibWFzay04IiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcGF0aC03Ij48L3VzZT4KICAgICAgICAgICAgICAgIDwvbWFzaz4KICAgICAgICAgICAgICAgIDxnIGlkPSJhIj48L2c+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iU2hhcGUiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIgbWFzaz0idXJsKCNtYXNrLTgpIiBwb2ludHM9IjIxLjM5NTM0ODggMjAuOTA5MDkwOSA2Ljk3Njc0NDE5IDEwIDUuMTE2Mjc5MDcgOC42MzYzNjM2NCAyMS4zOTUzNDg4IDQuMDkwOTA5MDkiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
-            </button>
+        <!-- <div class="modal-footer text-center flex-column px-5 section-or" id="divFooter">
 
-            <button class="btn btn-lg btn-primary border rounded-circle p-0 shadow-sm ml-3"
-              style="height:50px;width:50px;background-color:#4267b2">
-              <img class="m-auto" style="vertical-align: text-bottom"
-                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSIxOXB4IiB2aWV3Qm94PSIwIDAgMTEgMTkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ4LjIgKDQ3MzI3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Hcm91cDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUuMDAwMDAwLCAtMS4wMDAwMDApIj4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0Q4RDhEOCIgb3BhY2l0eT0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj48L3JlY3Q+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS42MzUxNTA5LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTEuNTAxMDM0OSBMMTQuNjQ4OTUzLDExLjUwMTAzNDkgTDE1LjEwMDIyNzEsOC4wNjg1NTQxMSBMMTEuNjM1MTUwOSw4LjA2ODU1NDExIEwxMS42MzUxNTA5LDUuODc3MTMyMDEgQzExLjYzNTE1MDksNC44ODMzNDk2MyAxMS45MTY0Nzc0LDQuMjA2MTE5NzEgMTMuMzY5MjYzNCw0LjIwNjExOTcxIEwxNS4yMjIyMjIyLDQuMjA1MzI1NDcgTDE1LjIyMjIyMjIsMS4xMzUyODcxMyBDMTQuOTAxNzYsMS4wOTM0NTY2NyAxMy44MDE4MjQ0LDEgMTIuNTIyMTM0OCwxIEM5Ljg1MDU2Njg5LDEgOC4wMjE1MzkyNiwyLjU5OTYxODExIDguMDIxNTM5MjYsNS41MzcxOTMzMSBMOC4wMjE1MzkyNiw4LjA2ODU1NDExIEw1LDguMDY4NTU0MTEgTDUsMTEuNTAxMDM0OSBMOC4wMjE1MzkyNiwxMS41MDEwMzQ5IEw4LjAyMTUzOTI2LDE5Ljk5OTU4ODkgTDExLjYzNTE1MDksMTkuOTk5NTg4OSBaIiBpZD0iZiIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=">
-            </button>
-          </div>
-
-          <div class="my-3">
-            <a href="#" id="lnkEmail" onclick="showEmail(event)">Signup with email</a>
-            <a href="#" id="lnkMobile" style="display:none" onclick="showPhone(event)">Signup with mobile number</a>
-          </div>
-
-          <div class="small d-block text-muted">
-            By signing in, you confirm that you have read and agree to our
-            <a href="#">Terms & Conditions</a> and
-            <a href="#">Privacy Policy</a>
-          </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

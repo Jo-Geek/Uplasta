@@ -35,7 +35,7 @@ body {
 }
 
 body.home {
-  background-image: url(../img/sectionbg.png);
+  /* background-image: url(../img/sectionbg.png); */
   background-position: center center;
   background-size: contain;
   background-attachment: fixed;
@@ -47,6 +47,134 @@ section.bg-light {
 
 section.bg-white {
   background-color: rgba(255, 255, 255, 0.025) !important;
+}
+
+section.courses {
+  background-image: url(../img/bg_courses.png);
+  background-repeat: no-repeat;
+  background-position: -50px center;
+  background-size: contain;
+}
+
+section.jobs .container {
+  position: relative;
+  margin-bottom: 4rem
+}
+
+section.jobs .container:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #0A63E0;
+  right: 15px;
+  top: 42px;
+}
+
+section.jobs .section-title {
+  margin-bottom: 3rem;
+}
+
+section.jobs .section-title:after {
+  width: 100%;
+  background-color: #0A63E0;
+}
+
+section.jobs .section-title+p {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  background-color: #0A63E0;
+  color: white;
+  padding: .4rem .5rem
+}
+
+section.jobs .section-title+p:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -32px;
+  border: 16px solid transparent;
+  border-right-color: #0A63E0;
+  border-bottom-color: #0A63E0;
+}
+
+section.jobs .btn-carousel-left {
+  height: 46px;
+  width: 46px;
+  left: -56px;
+}
+
+section.jobs .btn-carousel-right {
+  z-index: 1;
+  right: -48.5px;
+}
+
+section.jobs .btn-carousel-right:before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: 7.7px solid #0a63e0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+section.jobs .btn-more {
+  position: absolute;
+  right: 15px;
+  margin-top: 2rem;
+  z-index: 1;
+  border-radius: 0;
+  background-color: #0a63e0;
+  border: none;
+}
+
+section.jobs .btn-more:before {
+  content: '';
+  position: absolute;
+  border: 14.5px solid transparent;
+  border-right-color: #0a63e0;
+  border-bottom-color: #0a63e0;
+  top: 0;
+  left: -29px;
+}
+
+section.jobs .btn-more:hover {
+  background-color: #273be2;
+}
+
+section.jobs .btn-more:hover:before {
+  border-right-color: #273be2;
+  border-bottom-color: #273be2;
+}
+
+section.assessments {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+section.assessments:after {
+  content: '';
+  position: absolute;
+  height: 1000px;
+  width: 454px;
+  background-color: #133e7b;
+  transform: rotate(-33deg);
+  top: -100px;
+  z-index: -1;
+}
+
+section.assessments:before {
+  content: '';
+  position: absolute;
+  height: 1000px;
+  width: 671px;
+  background-color: #5798f3;
+  transform: rotate(-33deg);
+  top: -100px;
+  z-index: -1;
 }
 
 .section-title {

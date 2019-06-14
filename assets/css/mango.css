@@ -49,11 +49,49 @@ section.bg-white {
   background-color: rgba(255, 255, 255, 0.025) !important;
 }
 
+section.courses-bg {
+  background: rgb(39, 59, 226);
+  background: -moz-linear-gradient(left, rgba(39, 59, 226, 1) 1%, rgba(39, 59, 226, 1) 49%, rgba(223, 237, 255, 1) 50%, rgba(223, 237, 255, 1) 100%);
+  background: -webkit-linear-gradient(left, rgba(39, 59, 226, 1) 1%, rgba(39, 59, 226, 1) 49%, rgba(223, 237, 255, 1) 50%, rgba(223, 237, 255, 1) 100%);
+  background: linear-gradient(to right, rgba(39, 59, 226, 1) 1%, rgba(39, 59, 226, 1) 49%, rgba(223, 237, 255, 1) 50%, rgba(223, 237, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273be2', endColorstr='#dfedff', GradientType=1);
+}
+
 section.courses {
   background-image: url(../img/bg_courses.png);
   background-repeat: no-repeat;
   background-position: -50px center;
   background-size: contain;
+}
+
+section.features {
+  background-color: #DFEDFF;
+  position: relative;
+}
+
+section.features:before {
+  content: '';
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(132, 206, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(132, 206, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(132, 206, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84ceff', endColorstr='#00ffffff', GradientType=0);
+  top: 0;
+  left: 0;
+}
+
+.features-icon {
+  height: 90px;
+}
+
+img.features-arrow {
+  height: 20px;
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
 }
 
 section.jobs .container {
@@ -182,6 +220,12 @@ section.assessments:before {
   margin-bottom: 1.5rem;
 }
 
+.section-subtitle {
+  font-size: 65%;
+  color: var(--muted);
+  font-weight: 300;
+}
+
 .section-title:after {
   content: '';
   position: absolute;
@@ -233,7 +277,7 @@ section.assessments:before {
 .ribbon-course-value {
   position: absolute;
   right: 0;
-  bottom: .75rem;
+  top: .75rem;
   padding: .25rem .5rem;
   background-color: #58379F;
   color: white;
